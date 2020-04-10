@@ -12,8 +12,11 @@ describe('Quantia', () => {
     })
 
     describe('#unidade', () => {
-        test('Verifica que 1 é unidade', () => {
+        test('Verifica que é unidade', () => {
             expect(new Quantia(1).unidade()).toBeTruthy()
         })
+        test('Verifica que não é unidade', () => {
+         expect(new Quantia(2).unidade()).toBeFalsy()
+     })
     })
 })
