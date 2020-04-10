@@ -9,7 +9,8 @@ const tabela = [
     { valor: 6, extenso: 'SEIS' },
     { valor: 7, extenso: 'SETE' },
     { valor: 8, extenso: 'OITO' },
-    { valor: 9, extenso: 'NOVE' }
+    { valor: 9, extenso: 'NOVE' },
+    { valor: 10, extenso: 'DEZ' }
 ]
 
 describe('Quantia', () => {

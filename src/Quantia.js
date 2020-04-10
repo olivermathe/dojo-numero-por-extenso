@@ -1,7 +1,7 @@
 
-const UNIDADES = {
-    1: [null, 'UM', 'DOIS', 'TRÊS', 'QUATRO', 'CINCO', 'SEIS', 'SETE', 'OITO', 'NOVE']
-}
+const UNIDADES = [
+    'UM', 'DOIS', 'TRÊS', 'QUATRO', 'CINCO', 'SEIS', 'SETE', 'OITO', 'NOVE', 'DEZ'
+]
 
 class Quantia {
     constructor(valor) {
@@ -17,8 +17,7 @@ class Quantia {
     }
 
     porExtenso() {
-        const tamanho = this.valor.toString().length
-        return UNIDADES[tamanho][this.valor]
+        return UNIDADES[this.valor - 1]
     }
 }
 
