@@ -4,11 +4,8 @@ const ErroChequeNegativo = require('../src/ErroChequeNegativo')
 
 describe('Cheque', () => {
     describe('#constructor()', () => {
-        
         test('Emitir erro se o cheque estiver sem valor', () => {
-
             expect(() => new Cheque()).toThrow(ErroChequeVazio)
-
         });
 
         test('Emitir erro se o cheque estiver com número negativo', () => {
@@ -16,8 +13,14 @@ describe('Cheque', () => {
                negativo: () => true
             }
             expect(() => new Cheque(quantiaFake)).toThrow(ErroChequeNegativo)
-
         })
-
     });
+
+    describe('#porExtenso()', () => {
+        test('Converter 1 real', () => {
+            const quantiaFake = { negativo: () => false }
+            const cheque = new Cheque(quantiaFake)
+            expect(cheque.porExtenso()).toBe('UM REAL')
+        })
+    })
 });
