@@ -17,7 +17,7 @@ describe('Cheque', () => {
     });
 
     describe('#porExtenso()', () => {
-        test('Converter 1 real', () => {
+        test('Conversão de uma unidade', () => {
             const quantiaFake = {
                 negativo: () => false,
                 porExtenso: () => 'UM',
@@ -27,7 +27,7 @@ describe('Cheque', () => {
             expect(cheque.porExtenso()).toBe('UM REAL')
         })
 
-        test('Converter 2 reais', () => {
+        test('Conversão de valores maiores que 1', () => {
             const quantiaFake = {
                 negativo: () => false,
                 porExtenso: () => 'DOIS',
