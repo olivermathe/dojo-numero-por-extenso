@@ -1,0 +1,24 @@
+{
+  "name": "code-dojo",
+  "version": "1.0.0",
+  "description": "Sessão de Dojo Sexta Feira Santa",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon index.js",
+    "lint": "eslint .",
+    "coverage": "jest --coverage"
+  },
+  "keywords": [
+    "coding",
+    "dojo",
+    "session"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "jest": "25.3.0"
+  }
+}
