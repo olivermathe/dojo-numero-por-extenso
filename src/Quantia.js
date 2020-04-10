@@ -11,6 +11,10 @@ class Quantia {
     unidade() {
         return this.valor === 1;
     }
+
+    porExtenso() {
+        return 'UM'
+    }
 }
 
 module.exports = Quantia

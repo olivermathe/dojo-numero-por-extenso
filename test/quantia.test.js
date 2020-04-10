@@ -16,7 +16,13 @@ describe('Quantia', () => {
             expect(new Quantia(1).unidade()).toBeTruthy()
         })
         test('Verifica que não é unidade', () => {
-         expect(new Quantia(2).unidade()).toBeFalsy()
-     })
+            expect(new Quantia(2).unidade()).toBeFalsy()
+        })
+    })
+
+    describe('#porExtenso', () => {
+        test('Retorna 1 por extenso', () => {
+            expect(new Quantia(1).porExtenso()).toBe('UM')
+        })
     })
 })
