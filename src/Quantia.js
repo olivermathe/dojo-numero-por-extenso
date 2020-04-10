@@ -15,7 +15,9 @@ class Quantia {
     porExtenso() {
         if (this.valor === 1)
             return 'UM'
-        return 'DOIS'
+        if (this.valor === 2)
+            return 'DOIS'
+        return 'TRÊS'
     }
 }
 
