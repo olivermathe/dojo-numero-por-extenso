@@ -24,5 +24,9 @@ describe('Quantia', () => {
         test('Retorna 1 por extenso', () => {
             expect(new Quantia(1).porExtenso()).toBe('UM')
         })
+
+        test('Retorna 2 por extenso', () => {
+            expect(new Quantia(2).porExtenso()).toBe('DOIS')
+        })
     })
 })
