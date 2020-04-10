@@ -7,6 +7,10 @@ class Quantia {
     negativo() {
         return this.valor < 0;
     }
+
+    unidade() {
+        return this.valor === 1;
+    }
 }
 
 module.exports = Quantia
