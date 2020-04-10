@@ -1,4 +1,8 @@
 
+const UNIDADES = {
+    1: [null, 'UM', 'DOIS', 'TRÊS', 'QUATRO', 'CINCO', 'SEIS', 'SETE', 'OITO', 'NOVE']
+}
+
 class Quantia {
     constructor(valor) {
         this.valor = valor
@@ -13,11 +17,8 @@ class Quantia {
     }
 
     porExtenso() {
-        if (this.valor === 1)
-            return 'UM'
-        if (this.valor === 2)
-            return 'DOIS'
-        return 'TRÊS'
+        const tamanho = this.valor.toString().length
+        return UNIDADES[tamanho][this.valor]
     }
 }
 
