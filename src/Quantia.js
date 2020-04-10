@@ -1,6 +1,12 @@
 
 const UNIDADES = [
-    'UM', 'DOIS', 'TRÊS', 'QUATRO', 'CINCO', 'SEIS', 'SETE', 'OITO', 'NOVE', 'DEZ'
+    'UM', 'DOIS', 'TRÊS', 'QUATRO', 'CINCO', 'SEIS', 'SETE', 'OITO', 
+    'NOVE', 'DEZ', 'ONZE', 'DOZE', 'TREZE', 'QUATORZE', 'QUINZE',
+    'DESESSEIS', 'DESESSETE', 'DEZOITO', 'DEZENOVE', ['VINTE']
+]
+
+const NOMES = [
+    'VINTE'
 ]
 
 class Quantia {
@@ -17,7 +23,16 @@ class Quantia {
     }
 
     porExtenso() {
-        return UNIDADES[this.valor - 1]
+
+        const tamanho = this.valor.toString().length
+
+        if (this.valor < 20) {
+            return UNIDADES[this.valor - 1]
+        }
+        
+        const dezenas = this.valor/20
+        return NOMES[dezenas - 1]
+
     }
 }
 

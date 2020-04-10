@@ -1,17 +1,15 @@
 const Quantia = require('../src/Quantia')
 
-const tabela = [
-    { valor: 1, extenso: 'UM' },
-    { valor: 2, extenso: 'DOIS' },
-    { valor: 3, extenso: 'TRÊS' },
-    { valor: 4, extenso: 'QUATRO' },
-    { valor: 5, extenso: 'CINCO' },
-    { valor: 6, extenso: 'SEIS' },
-    { valor: 7, extenso: 'SETE' },
-    { valor: 8, extenso: 'OITO' },
-    { valor: 9, extenso: 'NOVE' },
-    { valor: 10, extenso: 'DEZ' }
+const nomes = [
+    'UM', 'DOIS', 'TRÊS', 'QUATRO', 'CINCO', 'SEIS', 'SETE', 'OITO', 
+    'NOVE', 'DEZ', 'ONZE', 'DOZE', 'TREZE', 'QUATORZE', 'QUINZE',
+    'DESESSEIS', 'DESESSETE', 'DEZOITO', 'DEZENOVE'
 ]
+
+const tabela = [ ]
+
+for (let i = 0; i < nomes.length; i++)
+    tabela.push({ valor: i + 1, extenso: nomes[i] })
 
 describe('Quantia', () => {
     describe('#negativo', () => {
@@ -39,5 +37,8 @@ describe('Quantia', () => {
                 expect(new Quantia(input.valor).porExtenso()).toBe(input.extenso)
             })
         }
+        test('Retorna 20 por extenso', () => {
+            expect(new Quantia(20).porExtenso()).toBe('VINTE')
+        })
     })
 })
